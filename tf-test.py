@@ -15,7 +15,7 @@ GEN_LENGTH = 120
 INIT_STATE = [60, 63, 67]
 
 # threshold for rounding
-THRESHOLD = 0.5
+THRESHOLD = 0.99
 
 def main():
     arglist = sys.argv
@@ -134,10 +134,11 @@ def main():
             # print("Input for this interation: \n" + str(data1))
             # print("Output for this iteration: \n" + str(result))
             #threshold_to_file(gen_fp, result)
-            gen_fp.write(str(result) + '\n')
+            threshold_to_file(gen_fp, result)
             i += 1
 
     sess.close()
+    gen_fp.close()
 
 def div_reduce(arr):
     prod = 0.5
