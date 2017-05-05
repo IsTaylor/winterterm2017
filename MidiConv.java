@@ -10,7 +10,7 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 
 public class MidiConv {
-
+ 
     private static int TEMPO = 500000;
     private static int BPM = 60000000/TEMPO;
     private static int STEP = 256 / 4;

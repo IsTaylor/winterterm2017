@@ -2,7 +2,7 @@
 Attempting machine learning
 
 ## Getting Started
-
+ 
 ### Prerequisites
 If you want to train with your own midi files, you'll want to download Midicsv(http://www.fourmilab.ch/webtools/midicsv/).
 This website has a tar file about halfway down, along with usage information. Once you have downloaded it, follow the instructions in their README, go ahead and test it out if you want.

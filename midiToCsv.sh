@@ -9,7 +9,7 @@ if [ ! -d "$DIRECTORY" ]; then
   echo "$DIRECTORY is not a directory"
 fi
 done
-
+ 
 ORGDIR=$DIRECTORY
 
 mkdir -p ./csv_in;

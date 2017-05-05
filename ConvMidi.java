@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConvMidi {
-    
+     
     static int num_lines = 0;
     
     public static void main(String[] args) {

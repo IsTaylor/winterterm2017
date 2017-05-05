@@ -1,6 +1,6 @@
 #!/bin/bash
 # A test script to run a program on many files
-
+ 
 DIRECTORY=""
 while [ ! -d "$DIRECTORY" ]; do
 echo -e "Please enter the folder you've placed your Csv files in:"

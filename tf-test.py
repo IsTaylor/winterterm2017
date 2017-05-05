@@ -2,6 +2,7 @@ import tensorflow as tf
 import sys
 import numpy as np
 
+#
 # input variables for the NN
 n_input = 127
 n_output = 127
