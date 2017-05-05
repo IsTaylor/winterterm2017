@@ -15,9 +15,9 @@ def main():
     # The following code sets up the network as desired,
     # followed by data setup
 
-    x = tf.placeholder(tf.float32, [None, n_input])
+    x = tf.placeholder(tf.float32, [1, n_input])
     # input matrix of 1x127 vectors (from CSV)
-    y_ = tf.placeholder(tf.float32, [None, n_output])
+    y_ = tf.placeholder(tf.float32, [1, n_output])
     # storing 'correct' answer
 
     W_hidden1 = tf.Variable(tf.zeros([n_input, n_hidden1]))
@@ -55,10 +55,12 @@ def main():
     # run data
     idx = 0
     while (idx < len(data_array_inorder) - 1):
+        data1 = np.reshape(data_array_inorder[idx], (1, 127))
+        data2 = np.reshape(data_array_inorder[idx+1], (1, 127))
         cost, output = sess.run([cross_entropy, output],
                         feed_dict={
-                            x:data_array_inorder[idx],
-                            y_:data_array_inorder[idx+1]
+                            x:data1,
+                            y_:data2
                         })
 
 def make_tolerable(line):
