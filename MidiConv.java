@@ -128,12 +128,20 @@ public class MidiConv {
 		*/
 
 
-		if (currentEvent[2].equals("Note_on_c")){
+		if (currentEvent[2].equals("Note_on_c") && currentEvent[5] != "0"){
 		    Integer[] currentNotes = arrayArray.get(arrayArray.size() - 1).notes;
 		    int midiValue = Integer.parseInt(currentEvent[4]);
 		    currentNotes[midiValue] = 1;
 		    //System.out.println("note on");
 		}
+		
+		if (currentEvent[2].equals("Note_on_c") && currentEvent[5] == "0"){
+		    Integer[] currentNotes = arrayArray.get(arrayArray.size() - 1).notes;
+		    int midiValue = Integer.parseInt(currentEvent[4]);
+		    currentNotes[midiValue] = 0;
+		    //System.out.println("note on");
+		}
+		
 		if (currentEvent[2].equals("Note_off_c")){
 		    Integer[] currentNotes = arrayArray.get(arrayArray.size() - 1).notes;
 		    int midiValue = Integer.parseInt(currentEvent[4]);

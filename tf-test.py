@@ -122,14 +122,14 @@ def main():
             data2 = np.reshape(current, (1, n_output))
             # print(str(data2))
 
-            print("DATA 1: \n" + str(data1))
-            print("DATA 2: \n" + str(data2))
+            # print("DATA 1: \n" + str(data1))
+            # print("DATA 2: \n" + str(data2))
             cost, _,  result = sess.run([cross_entropy, train_step, output],
                             feed_dict={
                                 x:data1,
                                 y:data2
                             })
-            print("RESULT OF D1 and D2: \n" + str(result))
+            # print("RESULT OF D1 and D2: \n" + str(result))
             print(name + " generation line " + str(i+1) + " | cost: " + str(cost))
             # print("Input for this interation: \n" + str(data1))
             # print("Output for this iteration: \n" + str(result))
