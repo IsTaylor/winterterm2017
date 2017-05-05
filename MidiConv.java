@@ -1,3 +1,6 @@
+/**
+ * Converts CSV files to tensorflow-compatible files
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -12,7 +15,7 @@ public class MidiConv {
 public static void main(String[] args) {
 	Scanner scanny = null;
 	try {
-	    scanny = new Scanner(new File("/Users/qbp/Dropbox/WT 2017/test.csv"));
+	    scanny = new Scanner(new File(args[0]));
 	} catch (FileNotFoundException e) {
 	    System.out.println("Not a valid file:" + e.getMessage());
 	    System.exit(1);
